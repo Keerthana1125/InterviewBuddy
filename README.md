@@ -1,16 +1,29 @@
-# React + Vite
+User Profile Management Dashboard (React & Firestore)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains a responsive, single-page application built with React and Tailwind CSS for managing a user's professional profile information. Data persistence is handled using Google Cloud Firestore.
 
-Currently, two official plugins are available:
+The application is structured as a main dashboard (UserManagement) that allows users to switch to a detailed Profile Page to view and edit their information across different modules: Basic Info, Education & Skills, and Work Experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Features:
 
-## React Compiler
+Single-File Architecture: The profile page logic is consolidated into a single React file (UserProfileManager.jsx) for easy deployment and collaboration.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Real-time Data Persistence: Utilizes Firebase Firestore to securely store and retrieve user profile data in real-time.
 
-## Expanding the ESLint configuration
+Responsive Dual-Column Layout: All form sections (Basic Info, Education, Experience) use a responsive grid to display fields in two columns on desktop screens and collapse to a single column on mobile.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Modular Forms: Profile data is organized into three distinct, tabbed sections for clear separation of concerns.
+
+Optimistic UI: Data updates are handled immediately and reflected in the UI upon successful save to Firestore.
+
+🛠️ Technology Stack:
+
+Frontend: React (Functional Components and Hooks)
+
+Styling: Tailwind CSS (for rapid, utility-first styling)
+
+Database: Firebase Firestore (Real-time NoSQL database)
+
+Authentication: Firebase Auth (using custom/anonymous sign-in handled by the hosting environment)
+
+
